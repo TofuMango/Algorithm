@@ -24,7 +24,9 @@ for test_case in range(1, t+1):
     # 10진수로 변환하기 위해 8자리로 만들기
     # 입력값 * 6 -> 6비트로 바꿔준거를
     # 8비트로 변경하니까 이렇게됨
-    for j in range(len(word)*6 // 8):
+#    for j in range(len(word)*6 // 8):
+#근데 사실 value를 쓰면 해결됨
+    for j in range(len(value)//8):
         data = int(value[j*8 : j* 8+8], 2)
         result += chr(data)
 
